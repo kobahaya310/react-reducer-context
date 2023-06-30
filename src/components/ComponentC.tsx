@@ -2,20 +2,16 @@
 import { useCounter } from "@/store/CounterContext";
 
 const ComponentC = () => {
-  const [count, setCount] = useCounter();
-  const increment = () => {
-    setCount((prev) => prev + 1);
-  };
+  const [count, countDispatch] = useCounter();
 
   return (
     <div>
       <p>Component C</p>
-      <p>{count}</p>
       <button
-        onClick={increment}
+        onClick={() => countDispatch({ type: "increase" })}
         className="border border-solid border-gray-300 rounded-sm py-0.5 px-1"
       >
-        Add
+        +
       </button>
     </div>
   );
