@@ -8,7 +8,7 @@ const ComponentB = () => {
     <div>
       <p>Component B</p>
       <button
-        className="border border-solid border-gray-300 rounded-sm py-0.5 px-1"
+        className="border border-solid border-gray-300 rounded-sm px-2"
         onClick={() => countDispatch({ type: "decrease" })}
       >
         -

@@ -21,10 +21,10 @@ const ComponentA = () => {
     <div>
       <p>Component A</p>
       <form onSubmit={handleSubmit}>
-        <input type="text" onChange={(e) => setValue(e.target.value)} />
+        <input type="text" className="border" onChange={(e) => setValue(e.target.value)} />
         <button
           type="submit"
-          className="border border-solid border-gray-300 rounded-sm py-0.5 px-1"
+          className="border border-solid border-gray-300 rounded-sm px-1 mx-1"
         >
           Add
         </button>
