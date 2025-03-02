@@ -1,8 +1,8 @@
-import { CounterReducerAction } from "@/types/types";
+import { CounterReducerAction } from "@/types/statetypes";
 
-export const counterInitialstate = 100;
+export const Counter_initialstate = 100;
 
-export const counterReducer = (
+export const CounterReducer = (
   state: number,
   action: CounterReducerAction
 ): number => {

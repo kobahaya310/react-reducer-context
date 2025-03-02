@@ -3,12 +3,13 @@ import {
   Dispatch,
   ReactNode,
   Reducer,
+  SetStateAction,
   createContext,
   useContext,
   useReducer,
 } from "react";
-import { counterReducer, counterInitialstate } from "./counterReducer";
-import { CounterReducerAction } from "@/types/types";
+import { CounterReducer, Counter_initialstate } from "./CounterReducerConfig";
+import { CounterReducerAction } from "@/types/statetypes";
 
 const CounterContext = createContext<
   [number, Dispatch<CounterReducerAction>] | undefined
@@ -16,8 +17,8 @@ const CounterContext = createContext<
 
 export const CounterProvider = ({ children }: { children: ReactNode }) => {
   const [state, dispatch] = useReducer<Reducer<number, CounterReducerAction>>(
-    counterReducer,
-    counterInitialstate
+    CounterReducer,
+    Counter_initialstate
   );
   return (
     <CounterContext.Provider value={[state, dispatch]}>
